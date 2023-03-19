@@ -29,20 +29,7 @@ public class Ejercicio2App {
         listaCompra.put("Platanos", 7);
 
         System.out.println(listaCompra.put("Platanos", 7));
-       /*      
-        for (int h = 1; h<=9; h++){
-            suma =0;
-            for(int j=1; j<listaCompra.size();j++){
-                x[j] = listaCompra.get(j);
-                cambio=Integer.parseInt(x[5]);
-                if(cambio == h){
-//System.out.print(x[5] + " | "+ x[15] + "   |   "+ x[29] + "\n");
-                    suma += Double.parseDouble(x[29]);
-                }
-            }
    
-}
-*/
 
 while (senumera.hasMoreElements()) {
      suma += senumera.nextElement();

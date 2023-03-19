@@ -5,10 +5,11 @@ import java.util.Scanner;
 import java.util.Set;
 import javax.swing.JOptionPane;
 
-
-public class Ejercicio3App {
+public class Ejercicio4App {
 	public static void main(String[]args) {
-        Hashtable<String, Integer> stock = new Hashtable<String, Integer>();
+double suma=0;
+int i = 0;
+		Hashtable<String, Integer> stock = new Hashtable<String, Integer>();
         Enumeration<Integer> senumera = stock.elements();
         //Lista de articulos en Hashtable
         stock.put("patinete", 70);
@@ -22,7 +23,7 @@ public class Ejercicio3App {
         stock.put("cantimplora", 20);
         //Creación de articulos
         int cantidad = Integer.parseInt(JOptionPane.showInputDialog("Introduce la cantidad de articulos"));
-        for (int i = 0; i < cantidad; i++) {
+        for ( i = 0; i < cantidad; i++) {
             String nombre = JOptionPane.showInputDialog("Introduce nombre del articulo");
             int precio = Integer.parseInt(JOptionPane.showInputDialog("Introduce nombre del articulo"));
             stock.put(nombre, precio);
@@ -33,8 +34,19 @@ public class Ejercicio3App {
          System.out.println( senumera.nextElement());
         }
 
+		while (senumera.hasMoreElements()) {
+			suma += senumera.nextElement();
+	   i++;
+		 }
          System.out.println( stock.get(senumera));
 
-        }
-    }
-   
+		 double total_iva = suma * 0.4;
+		 double precio = total_iva + suma;
+		 double pagado = 50;
+		 System.out.println("El cliente ha pagado: "+pagado);
+		 System.out.println("Se han comprado "+i+"articulos");
+		  double cambio = precio - pagado;
+		  System.out.println("El cambio a devolver es:"+cambio);
+		 
+}
+}
